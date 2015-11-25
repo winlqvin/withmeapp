@@ -5,25 +5,26 @@
 				<div class="panel-heading">
 					<h4>Chat room</h4>
 				</div>
-				<div class="panel-body chat-panel" id="chat-room" scroll-bottom="ListMessage">
+				<div class="panel-body chat-panel containter" id="chat-room" scroll-bottom="ListMessage">
 					<div ng-repeat="message in ListMessage">
-						<div class="well well-sm">
-							<strong>{{message.user.name}}: </strong>
-							<span>{{message.content}}</span>
+						<div class="clearfix">
+							<div class="well well-sm {{message.isMy && 'my-message pull-right'}}">
+								<strong ng-hide="message.isMy">{{message.user.name}}: </strong> {{message.content}}
+
+							</div>
+						</div>
 						</div>
 					</div>
-				</div>
-				<div class="panel-footer">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-xs-9 col-sm-10">
-								<input type="text" id="message-box" 
-								ng-enter="SendMessage()"
-								class="form-control input-md" ng-model="textmessage" placeholder="Nhap tin nhan ..."
-								rows="3">
-							</div>
-							<div class="col-xs-3 col-sm-2">
-								<button id="send-message-btn" class="btn btn-primary btn-md btn-block" ng-click="SendMessage()"> Gui</button>
+					<div class="panel-footer">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xs-9 col-sm-10">
+									<input type="text" id="message-box" ng-minlength="0" ng-maxlength="150" ng-trim="true" ng-enter="SendMessage()" class="form-control input-md"
+									ng-model="textmessage" placeholder="Nhap tin nhan ..." rows="3">
+								</div>
+								<div class="col-xs-3 col-sm-2">
+									<button id="send-message-btn" class="btn btn-primary btn-md btn-block" ng-click="SendMessage()"> Gui</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -31,5 +32,4 @@
 			</div>
 		</div>
 	</div>
-</div>
-<hr>
+	<hr>

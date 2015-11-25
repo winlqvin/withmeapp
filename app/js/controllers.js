@@ -13,8 +13,8 @@ angular.module('WithMeApp.controllers', []).
   .controller('ChatRoomCtrl', ['$scope', function($scope){
     $scope.ListMessage = [];
     $scope.SendMessage = function(){
-      if ($scope.textmessage == "") return;
-      var message = { user: {name: 'toi'}, content: $scope.textmessage};
+      if ($scope.textmessage.length == 0) return;
+      var message = { user: {name: 'toi'}, content: $scope.textmessage, isMy: true};
       $scope.ListMessage.push(message);
       $scope.textmessage = "";
       $scope.ListMessage.push(MachineMessage());
@@ -22,7 +22,7 @@ angular.module('WithMeApp.controllers', []).
   }]);
   
     var MachineMessage = function(){
-     var message = { user: {name: 'Machine'}, content: ""};
+     var message = { user: {name: 'Machine'}, content: "", isMy: false};
      var messages = [
        'What the fuck!',
        'I am kidding!',

@@ -39,3 +39,13 @@
   max-height: 30em;
   overflow-y: scroll;
 }
+
+.well{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  display: inline-block !important;
+}
+
+.my-message{
+  background-color:  moccasin !important;
+}
