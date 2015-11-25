@@ -28,3 +28,14 @@
   content: "";
   padding: 0;
 }
+
+.content {
+  min-height: 45em;
+}
+
+
+.chat-panel{
+  min-height: 30em;
+  max-height: 30em;
+  overflow-y: scroll;
+}
