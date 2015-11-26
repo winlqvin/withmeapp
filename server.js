@@ -5,9 +5,12 @@ var express = require('express'),
     morgan = require('morgan');
 
 
-var DEFAULT_PORT =  process.env.OPENSHIFT_NODEJS_PORT || 9000;
+var DEFAULT_PORT =  process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var DEFAULT_HOST = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
 
+if (DEFAULT_HOST == 'localhost'){
+    DEFAULT_PORT = 9000;
+}
 
 var app = express();
 
