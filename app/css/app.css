@@ -1,32 +1,6 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.wrap {
+  min-height: 1024px;
 }
 
 .content {
@@ -37,15 +11,53 @@
 .chat-panel{
   min-height: 30em;
   max-height: 30em;
+  
+}
+
+.scrollbar{
   overflow-y: scroll;
 }
 
+.scrollbar::-webkit-scrollbar-track
+{
+	border-radius: 2px;
+	background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 2px;
+	background-color: #BBB;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.2) 50%,
+											  transparent,
+											  transparent)
+}
+
 .well{
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
   display: inline-block !important;
+  max-width: 90%;
 }
 
 .my-message{
   background-color:  moccasin !important;
+}
+
+.message-content{
+  white-space: pre-line;
+}
+
+#message-box{
+  resize: none;
 }

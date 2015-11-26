@@ -3,7 +3,10 @@
 
 
 
-
+.btn-sq-sm{
+	height: 4em;
+	width: 4em;
+}
 
 #footer {
 	background-color: #333;

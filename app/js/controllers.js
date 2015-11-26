@@ -14,6 +14,8 @@ angular.module('WithMeApp.controllers', []).
     $scope.ListMessage = [];
     $scope.SendMessage = function(){
       if ($scope.textmessage.length == 0) return;
+      //$scope.textmessage = $scope.textmessage.replace(/\r\n|\r|\n|\n/g,'<br>');
+
       var message = { user: {name: 'toi'}, content: $scope.textmessage, isMy: true};
       $scope.ListMessage.push(message);
       $scope.textmessage = "";
