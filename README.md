@@ -24,3 +24,4 @@ Hệ thống cấu trúc thư mục dành cho nhà phát triển:
   - js                                  (chứa các mã javascript mà người dùng tự tạo thêm)
   - fonts                               (chứa các fonts cần dùng)
   - libs                                (chứa các thư viện như jquery, bootstrap, angular...)
+- logs                                  (chứa các tập tin log)
