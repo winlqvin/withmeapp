@@ -1,0 +1,30 @@
+<div ng-controller="ChatRoomCtrl" class="panel panel-success">
+    <div class="panel-heading">
+        <h4>Chat room</h4>
+    </div>
+    <div class="panel-body chat-panel containter scrollbar" id="chat-room" scroll-bottom="ListMessage">
+        <div ng-repeat="message in ListMessage">
+            <div class="clearfix">
+                <div class="well well-sm {{message.isMy && 'my-message pull-right'}}">
+                    <strong ng-hide="message.isMy">{{message.user.name}}: </strong>
+                    <span ng-bind="message.content" class="message-content"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-10 col-sm-10 col-md-10">
+                    <textarea id="message-box" ng-minlength="0" ng-maxlength="150"
+                    ng-trim="true" ng-enter="SendMessage()" class="form-control input-md"
+                    ng-model="textmessage" placeholder="Nhập tin nhắn ..." rows="2"></textarea>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <button id="send-message-btn" class="btn btn-primary btn-sq-sm btn-md btn-block" ng-click="SendMessage()">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
