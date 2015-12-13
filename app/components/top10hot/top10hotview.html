@@ -1,0 +1,115 @@
+<div class="row" ng-controller='Top10Hot'>
+    <div class="row">
+        <div class="col-md-9">
+            <h3>
+                Top Hot girl
+            </h3>
+        </div>
+        <div class="col-md-3">
+            <!-- Controls -->
+            <div class="controls pull-right hidden-xs">
+                <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a>
+                <a class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a>
+            </div>
+        </div>
+    </div>
+    <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+
+                    <div class="col-md-2 topmem" ng-repeat="member in femalemembers | limitTo:6:0">
+                        <div class="col-item">
+                            <h5>
+                                <span>{{member.name}}</span>
+                            </h5>
+                            <div class="photo">
+                                <a href="#/member/{{member.id}}">
+                                    <img ng-src='{{member.img}}' class="img-responsive" alt="a" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+
+                    <div class="col-md-2 topmem" ng-repeat="mem in femalemembers | limitTo:6:4">
+                        <div class="col-item">
+                            <h5>
+                                <span class="top_name">{{mem.name}}</span>
+                            </h5>
+                            <div class="photo">
+                                <a href="#/member/{{mem.id}}">
+                                    <img ng-src='{{mem.img}}' class="img-responsive" alt="a" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vùng hot boy -->
+    <div class="row">
+        <div class="col-md-9">
+            <h3>
+                Top Hot boy
+            </h3>
+        </div>
+        <div class="col-md-3">
+            <!-- Controls -->
+            <div class="controls pull-right hidden-xs">
+                <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example1" data-slide="prev"></a>
+                <a class="right fa fa-chevron-right btn btn-success" href="#carousel-example1" data-slide="next"></a>
+            </div>
+        </div>
+    </div>
+    <div id="carousel-example1" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="row">
+
+                    <div class="col-md-2 topmem" ng-repeat="boy in malemembers | limitTo:6:0">
+                        <div class="col-item">
+                            <h5>
+                                <span>{{boy.name}}</span>
+                            </h5>
+                            <div class="photo">
+                                <a href="#/member/{{boy.id}}">
+                                    <img ng-src='{{boy.img}}' class="img-responsive" alt="a" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <div class="row">
+
+                    <div class="col-md-2 topmem" ng-repeat="boy in malemembers | limitTo:6:4">
+                        <div class="col-item">
+                            <h5>
+                                <span class="top_name">{{boy.name}}</span>
+                            </h5>
+                            <div class="photo">
+                                <a href="#/member/{{boy.id}}">
+                                    <img ng-src='{{boy.img}}' class="img-responsive" alt="a" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix">
+</div>

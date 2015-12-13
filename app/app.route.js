@@ -18,5 +18,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             access:{                // yêu cầu Login hay không, dùng trong authorize
                 requiredLogin: false
             }
-        });
+        })
+        ;
 });

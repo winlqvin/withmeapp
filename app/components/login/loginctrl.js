@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('WithMeApp.controllers', [])
+angular.module('WithMeApp.controllers')
     .controller('LoginCtrl', ['$scope', function($scope) {
 
     }]);
