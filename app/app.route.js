@@ -21,15 +21,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 requiredLogin: false
             }
         })
+
         .state('mapchat', {    // Định nghĩa 1 state home
             url: '/mapchat',  // khai báo Url hiển thị
             templateUrl: 'components/mapchat/mapchatview.html',  // đường dẫn view
             controller: 'MapChatCtrl', // Khai báo controller
-            title: 'Chat với người lạ quanh bạn !',     // Tiêu đề trang
+            title: 'Chat với người lạ quanh bạn !'})     // Tiêu đề trang
+        .state('logged', {    // Định nghĩa 1 state home
+            url: '/logged',  // khai báo Url hiển thị
+            templateUrl: 'components/home/logged/loggedview.html',  // đường dẫn view
+            controller: 'LoggedCtrl', // Khai báo controller
+            title: 'Trang chủ',     // Tiêu đề trang
             access:{                // yêu cầu Login hay không, dùng trong authorize
                 requiredLogin: false
             }
-        })
-
-        ;
+        });
 });

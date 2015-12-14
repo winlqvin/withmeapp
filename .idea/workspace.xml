@@ -52,7 +52,7 @@
       <file leaf-file-name="mapchatctrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/mapchat/mapchatctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="45" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.7583643">
+            <state line="51" column="13" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.6635688">
               <folding />
             </state>
           </provider>
@@ -440,7 +440,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -518,7 +518,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="508" />
+      <option name="time" value="510" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -631,7 +631,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/mapchat/mapchatctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="45" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.7583643">
+        <state line="51" column="13" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.6635688">
           <folding />
         </state>
       </provider>
