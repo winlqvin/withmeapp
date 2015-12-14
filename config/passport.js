@@ -24,21 +24,21 @@ module.exports = function(passport) {
 	   },
 	   function(accessToken, refreshToken, profile, done) {
 	     	process.nextTick(function(){
-	     		var options = {
-					  host: 'http://localhost',
-					  port: 8080,
-					  path: '/users/userList',
-					  method: 'GET'
-					};
+	    //  		var options = {
+					//   host: 'http://localhost',
+					//   port: 3000,
+					//   path: '/users/userList',
+					//   method: 'GET'
+					// };
 
-					http.request(options, function(res) {
-					  console.log('STATUS: ' + res.statusCode);
-					  console.log('HEADERS: ' + JSON.stringify(res.headers));
-					  res.setEncoding('utf8');
-					  res.on('data', function (chunk) {
-					    console.log('BODY: ' + chunk);
-					  });
-					}).end();
+					// http.request(options, function(res) {
+					//   console.log('STATUS: ' + res.statusCode);
+					//   console.log('HEADERS: ' + JSON.stringify(res.headers));
+					//   res.setEncoding('utf8');
+					//   res.on('data', function (chunk) {
+					//     console.log('BODY: ' + chunk);
+					//   });
+					// }).end();
 	     		// User.findOne({'facebook.id': profile.id}, function(err, user){
 	     		// 	if(err)
 	     		// 		return done(err);
@@ -60,6 +60,7 @@ module.exports = function(passport) {
 	     		// 	}
 	     		// });
 	     	console.log(profile);
+	     	console.log("token: " + accessToken);
 	     	return done(null, null);
 	     	});
 	     }

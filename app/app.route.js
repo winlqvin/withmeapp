@@ -2,6 +2,8 @@
 
 //          Tạo các UI Route, định nghĩa các state và register Interceptors
 
+
+
 app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home'); // Mọi đường dẫn không hợp lệ đều được chuyển đến state home
@@ -19,5 +21,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 requiredLogin: false
             }
         })
+        .state('mapchat', {    // Định nghĩa 1 state home
+            url: '/mapchat',  // khai báo Url hiển thị
+            templateUrl: 'components/mapchat/mapchatview.html',  // đường dẫn view
+            controller: 'MapChatCtrl', // Khai báo controller
+            title: 'Chat với người lạ quanh bạn !',     // Tiêu đề trang
+            access:{                // yêu cầu Login hay không, dùng trong authorize
+                requiredLogin: false
+            }
+        })
+
         ;
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('WithMeApp.controllers')
+gcontroller
     .controller('SignInCtrl', ['$scope','$http',"DOMAIN", function($scope,$http, domain) {
 
 
@@ -28,19 +28,19 @@ angular.module('WithMeApp.controllers')
 
 
 
-        	$http({
-            method:'GET',
-            url: 'http://localhost:8080/users/auth/facebook',
-            withCredentials: true
+        	// $http({
+         //    method:'GET',
+         //    url: 'http://localhost:8080/users/auth/facebook',
+         //    withCredentials: true
 
-            })
-            .success(function (data, status) {
-            	console.log(data);
-                //$scope.student = data;
-            })
-            .error(function (err) {
-            	console.log(err);
-            });
+         //    })
+         //    .success(function (data, status) {
+         //    	console.log(data);
+         //        //$scope.student = data;
+         //    })
+         //    .error(function (err) {
+         //    	console.log(err);
+         //    });
 
         }
     }]);

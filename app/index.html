@@ -30,6 +30,15 @@
     <script src="libs/angular/angular-ui-router.min.js"></script>
     <script src="libs/jquery/jquery-2.1.4.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.js"></script>
+      <script src="../bower_components/angular-route/angular-route.js"></script>
+      <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+      <!-- Google Maps API -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV4A6gu1jC1alYoAyMB1fmWw6Hgvf5c8E"></script>
+      <!-- Modernizr -->
+      <script src="../bower_components/modernizr/bin/modernizr"></script>
+      <!--Services-->
+      <script src="./shared/services/gservice.js"></script>
+      <script src="./shared/services/mapchatservice.js"></script>
 
     <!-- App Modules -->
     <script src="app.module.js"></script>
@@ -40,10 +49,15 @@
     <script src="components/chat/chatctrl.js"></script>
     <script src="components/SignInSignUp/signinctrl.js"></script>
     <script src="components/top10hot/top10hotctrl.js"></script>
+    <script src="components/mapchat/mapchatctrl.js"></script>
 
     <!-- Directives -->
     <script src="shared/directives/chat.js"></script>
     <script src="shared/directives/title.js"></script>
+
+
+      <!--SOCKET IO-->
+      <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
 
 </body>
 
