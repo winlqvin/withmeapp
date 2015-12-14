@@ -1,0 +1,34 @@
+<div id="chat-box-list" ng-controller="ChatBoxCtrl">
+
+
+    <div ng-repeat="chatbox in chatboxlist" class="chat-box" style="right:{{260*chatbox.id + 280}}px">
+
+        <input type="checkbox">
+
+        <label data-expanded="{{chatbox.id}}" data-collapsed="{{chatbox.id}}"></label>
+
+        <div class="chat-box-content">
+
+            <div class="panel panel-success">
+                <div class="panel-body chat-panel containter scrollbar" id="chat-room" scroll-bottom="chatbox.ListMessage">
+                    <div ng-repeat="message in chatbox.ListMessage">
+                        <div class="clearfix  message-row">
+                            <div class="well well-sm {{message.isMy && 'my-message pull-right'}}">
+                                <strong ng-hide="message.isMy">{{message.user.name}}: </strong>
+                                <span ng-bind="message.content" class="message-content"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer input-message" >
+
+                    <textarea id="message-box" ng-minlength="0" ng-maxlength="150" ng-trim="true" ng-enter="SendMessage(chatbox.id)" class="form-control input-md" ng-model="chatbox.textmessage" placeholder="Nhập tin nhắn ..." rows="1"></textarea>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

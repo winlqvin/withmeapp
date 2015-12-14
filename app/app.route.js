@@ -19,5 +19,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
                 requiredLogin: false
             }
         })
+        .state('logged', {    // Định nghĩa 1 state home
+            url: '/logged',  // khai báo Url hiển thị
+            templateUrl: 'components/home/logged/loggedview.html',  // đường dẫn view
+            controller: 'LoggedCtrl', // Khai báo controller
+            title: 'Trang chủ',     // Tiêu đề trang
+            access:{                // yêu cầu Login hay không, dùng trong authorize
+                requiredLogin: false
+            }
+        })
         ;
 });

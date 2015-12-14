@@ -1,0 +1,23 @@
+<div class="col-md-3 col-md-offset-10" id="online-sidebar" ng-controller='OnlineSidebarCtrl'>
+    <div class="sidebar-nav-fixed pull-right affix">
+        <div class="well scrollbar">
+            <ul class="nav">
+                <li>
+
+                    <div class="well well-sm" ng-repeat="friend in friends" ng-click="OpenChatbox(friend.id)">
+                            <img ng-src="{{friend.imgurl}}" alt="{{friend.name}}" class="img-circle"></img>
+                            <span><strong>{{friend.name}}</strong></span>
+                    </div>
+
+                </li>
+            </ul>
+
+        </div>
+        <!--/.well -->
+        <div class="well search">
+            <input placeholder="Tìm kiếm..."> </input>
+            <button><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <!--/sidebar-nav-fixed -->
+</div>

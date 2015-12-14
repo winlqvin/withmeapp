@@ -9,8 +9,8 @@
 
 
 .chat-panel{
-  min-height: 30em;
-  max-height: 30em;
+  min-height: 260px;
+  max-height: 260px;
 
 }
 
@@ -41,11 +41,11 @@
 											  transparent)
 }
 
-.well{
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-  padding-top: 5px !important;
-  padding-bottom: 5px !important;
+.message-row > .well{
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
   display: inline-block !important;
   max-width: 90%;
 }
@@ -80,4 +80,54 @@
 .social-login{
     width: 64px;
     height: auto;
+}
+
+
+
+#online-sidebar{
+
+}
+
+#online-sidebar > .sidebar-nav-fixed {
+    width:20%;
+}
+#online-sidebar > .sidebar-nav-fixed > .well {
+    margin: 0px !important;
+    padding-top: 5px !important;
+    min-height: 550px;
+    max-height: 550px;
+}
+
+#online-sidebar > .sidebar-nav-fixed > .search {
+    margin: 0px !important;
+    padding: 5px !important;
+
+}
+
+#online-sidebar > .sidebar-nav-fixed >  .well > ul > li > .well {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+    margin-bottom: 0px !important;
+    padding-left: 5px;
+
+    max-height: 50px;
+    min-height: 50px;
+    cursor: pointer;
+    border: none;
+    /*background-color: rgb(0,131,236) !important;*/
+}
+
+#online-sidebar > .sidebar-nav-fixed >  .well > ul > li > .well:hover,
+#online-sidebar > .sidebar-nav-fixed >  .well > ul > li >  .well >img:hover,
+#online-sidebar > .sidebar-nav-fixed >  .well > ul > li >  .well >span:hover{
+    background-color: rgba(200,200,200,.81)!important;
+}
+
+#online-sidebar > .sidebar-nav-fixed >  .well > ul > li >  .well >img{
+    width: 44px;
+    height: 44px;
+}
+
+#online-sidebar > .sidebar-nav-fixed > .well > ul > li >  .well >span{
+    padding-left: 5px !important;
 }
