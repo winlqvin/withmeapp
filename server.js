@@ -2,8 +2,11 @@
 'use strict';
 
 var express = require('express'),
-    morgan = require('morgan');
-
+    morgan = require('morgan'),
+    cors = require('cors'),
+    passport = require('passport');
+//PASSPORT
+require('./config/passport')(passport);
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP;
 var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
@@ -17,9 +20,11 @@ if (typeof ipaddress === "undefined") {
 };
 
 var app = express();
-
+var users = require('./routes/users');
+app.use('/users', users);
 app.use(express.static(__dirname + '/app'));
 app.use(express.static(__dirname + '/assets'));
+app.use(cors());
 
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/app/index.html');
